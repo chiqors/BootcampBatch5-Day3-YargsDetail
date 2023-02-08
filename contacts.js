@@ -30,9 +30,11 @@ function showContact(name) {
     const contacts = JSON.parse(file);
     const contact = contacts.find((ct) => ct.name.toUpperCase() === name.toUpperCase());
     if (!contact) {
+        rl.close();
         console.log('Contact tidak ditemukan!');
         return false;
     }
+    rl.close();
     console.log(contact);
 }
 
