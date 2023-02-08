@@ -35,7 +35,10 @@ function showContact(name) {
         return false;
     }
     rl.close();
-    console.log(contact);
+    if (contact.name) console.log('Nama: ', contact.name);
+    if (contact.email) console.log('Email: ', contact.email);
+    if (contact.phone) console.log('No. Telepon: ', contact.phone);
+    // console.log(contact);
 }
 
 function saveContact(name, email, phone) {
